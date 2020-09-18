@@ -1,46 +1,59 @@
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
 
-body ul {
+
+.grid-list {
 	list-style-type: none;
 }
 
-body li {
+.grid-list-element {
 	float: left;
-	padding-right: 40px;
+	padding-right: 1%;
+	padding-left: 1%;
 	font-family: 'Montserrat', sans-serif;
-	max-width: 300px;
-	margin: auto;
-	font-size: 10px;
+	width: 340px;
+  	
 }
 
-li img {
+.image-section {
 	float: left;
-	padding-right: 20px;
-	max-block-size: 150px;
+	padding-right: 8%;
+	max-block-size: 20%;
+	width: 60%;
+    height: 60%;
 	object-fit: cover;
 }
 
-li p {
+.description {
 	text-align: justify;
 	text-justify: inter-word;
+	font-size: 0.7em;
 }
 
-hr {
+.title-section {
+	font-size: 1.2em;
+}
+
+.title-line {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid black;
   margin: 1em 0;
   padding: 0;
 }
 
-h2 {
-  display: inline-block;
-  padding-right: 20px;
+.price-section {
+  font-size: 1em;
+  margin-right: 10px;
 }
 
 button {
  	font-family: 'Montserrat', sans-serif;
-	padding: 10px 25px;
+	padding: 3%;
 	font-size: 12px;
 	cursor: pointer;
 	text-align: center;
@@ -50,7 +63,8 @@ button {
 	background-color: black;
 	border: none;
 	border-radius: 15px;
-	width: 130px;
+	width: 47%;
+	margin-bottom: 10px;
 
 }
 
@@ -63,7 +77,44 @@ button:active {
   transform: translateY(4px);
 }
 
-.grid {
-	background: #D3D3D3
+.grid-list{
+	background-color: #d3d3d3;
+	max-width: 1280px;
+	min-width: 425px;
+  	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+ 
 }
+
+@media (min-width: 768px) {
+  .grid-list-element {
+    max-width: 350px;
+    width: 350px;
+  }
+  .grid-list{
+  	display: flex;
+	flex-wrap: wrap;
+  	flex-direction: row;
+  	justify-content: space-around;
+  }
+}
+@media (min-width: 1024px) {
+  .grid-list-element {
+    max-width: 350px;
+    width: 330px;
+  }
+  button {
+  	width: 40%;
+  }
+  .grid-list{
+  	display: flex;
+	flex-wrap: wrap;
+  	flex-direction: row;
+  	justify-content: space-between;
+  	flex-basis: 33.33%;
+  }
+
+}
+
 

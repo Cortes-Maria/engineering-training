@@ -1,0 +1,115 @@
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.content__card {
+	float: left;
+	padding-right: 1%;
+	padding-left: 1%;
+	font-family: 'Montserrat', sans-serif;
+	width: 340px;
+  	
+}
+
+.content__card--image {
+	float: left;
+	padding-right: 8%;
+	width: 60%;
+  height: 60%;
+	object-fit: cover;
+}
+
+.content__card--description {
+	text-align: justify;
+	text-justify: inter-word;
+	font-size: 0.7em;
+}
+
+.content__card--title {
+	font-size: 1.2em;
+}
+
+.content__card--line {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid black;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.content__card--price {
+  font-size: 1em;
+  margin-right: 10px;
+}
+
+.content__button {
+ 	font-family: 'Montserrat', sans-serif;
+	padding: 3%;
+	font-size: 12px;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+	color: #fff;
+	background-color: black;
+	border: none;
+	border-radius: 15px;
+	width: 47%;
+	margin-bottom: 10px;
+
+}
+
+.content__button:hover {
+	background-color: gray
+}
+
+.content__button:active {
+  background-color: ghostwhite;
+  transform: translateY(4px);
+}
+
+.content{
+	background-color: #d3d3d3;
+	max-width: 1280px;
+	min-width: 425px;
+  display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+  list-style-type: none;
+ 
+}
+
+@media (min-width: 768px) {
+  .content__card {
+    max-width: 350px;
+    width: 350px;
+  }
+  .content: {
+  	display: flex;
+	  flex-wrap: wrap;
+  	flex-direction: row;
+  	justify-content: space-around;
+  }
+}
+@media (min-width: 1024px) {
+  .content__card {
+    max-width: 350px;
+    width: 330px;
+  }
+  .content__button {
+  	width: 40%;
+  }
+  .content: {
+  	display: flex;
+	  flex-wrap: wrap;
+  	flex-direction: row;
+  	justify-content: space-between;
+  	flex-basis: 33.33%;
+  }
+
+}
+
+

@@ -1,3 +1,6 @@
+@import './_settings/main.scss';
+
+
 
 .search {
     background-image: none;
@@ -8,7 +11,6 @@
         font-family: Arial;
         font-size: 24px;
         margin-left: 27px;
-        //margin-right: 95px;
         margin-bottom: 15px;
     }
     &__bar {
@@ -17,12 +19,12 @@
         justify-content: space-between;
         margin-left: 27px;
         margin-right: 30px;
-        border: 1px solid #8E8E8E;
+        border: 1px solid $search-bar;
         border-radius: 20px;
         font-family: Arial;
         font-size: 18px;
         line-height: 21px;
-        color: #8E8E8E;
+        color: $search-bar;
         text-indent: 15px;
         height: 44px;
         width: 84.16%;
@@ -34,20 +36,8 @@
         font-size: 18px;
         font-weight: lighter;
     }
-
-    &__icon {
-        font-size: 26px;
-        color: #8E8E8E;
-        margin-top: 8px;
-        margin-bottom: 9px;
-       // margin-left: 60px;
-        margin-right: 13px;
-    }   
-
-}
-
-@media (min-width: 768px) {
-    .search {
+    
+    @include tablet {
         background-image: url('../images/banner-mobile.png');
         background-size: 100vw;
         background-position: left;
@@ -59,15 +49,11 @@
             margin: 0;
         }
         &__bar {
-            background-color: white;
+            background-color:$search-background;
             margin-left: 60px;
         }
     }
-}
-
-@media (min-width: 1024px) {
-
-    .search {
+    @include desktop {
         background-image: url('../images/banner.png');
         background-size: cover;
         align-content: flex-start;
@@ -81,4 +67,5 @@
             max-width: 538px;
         }
     }
+
 } 

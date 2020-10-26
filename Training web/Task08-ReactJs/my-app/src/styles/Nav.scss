@@ -1,7 +1,10 @@
+@import './_settings/main.scss';
+
+
 
 .nav {
     height: 77px;
-    background-color: black;
+    background-color: $nav-background;
     display: flex;
     flex-flow: row;
     justify-content: space-between;
@@ -13,20 +16,20 @@
         margin: 0;
     }
     &__icon {
-        margin-top: 17px;
-        margin-bottom: 17px;
-        margin-right: 17px;
-        color: white;
+        margin: 17px 17px 17px 0px;
+        color: $nav-icon;
         font-size: 53px;
     }
     &__image {
         width: 100vw;
         margin-bottom: 15px;
     }
-}
-
-@media (min-width: 1024px) {
-    .nav {
+    @include tablet {
+        &__image {
+            display: none;
+        }
+    }
+    @include desktop {
         &__icon {
             display: none;
         }
@@ -39,17 +42,11 @@
             justify-content: space-between;
             font-family: Arial;
             font-size: 16px;
-            color: white;
+            color: $nav-text;
             list-style-type: none;
-            li {
-                margin: 5px;
-            }
         }
-    }
-}
-
-@media (min-width: 768px) {
-    .nav__image {
-        display: none;
+        &__item {
+            margin: 5px;
+        }
     }
 }

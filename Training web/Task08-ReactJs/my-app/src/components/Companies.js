@@ -59,10 +59,10 @@ function Companies(props) {
                 <hr className="card__line"/>
                 <div className="card__description">
                   <img className="card__image" src={comp.image} alt="cardImage"/>
-                  <p>{comp.description}</p>
+                  <p className="card__text">{comp.description}</p>
                 </div>
                 <div className="card__price">
-                  <b>Desde: ${comp.rate} / {comp.hours} horas</b>
+                  <b className="card__price-text">Desde: ${comp.rate} / {comp.hours} horas</b>
                   <button className="card__button">Contratar</button>
                 </div>
             </li>

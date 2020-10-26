@@ -1,0 +1,53 @@
+@import './_settings/main.scss';
+
+
+
+.footer {
+    display: flex;
+    flex-flow: column;
+    background-color:$footer-background;
+    color: $footer-text;
+    font-family: Arial;
+    font-size: 12px;
+    padding-left: 21px;
+    padding-top: 14px;
+    font-weight: bold;
+
+    &__description {
+        display: flex;
+        flex-flow: column;
+    }
+    &__text {
+        margin: 0;
+    }
+    &__terms {
+        text-decoration: underline;
+        margin-top: 13px;
+        margin-bottom: 19px;
+    }
+
+    @include tablet {
+        flex-flow: row;
+        padding-left: 14px;
+        &__description {
+            flex-flow: row;
+        }
+        &__text {
+            margin-right: 5px;
+            margin-top: 25.56px;
+        }
+        &__terms {
+            margin: 26.56px 23px 19.67px 230px;
+        }
+    }
+    @include desktop {
+        padding-left: 44px;
+        &__text {
+            margin-right: 5px;
+            margin-top: 23px;
+        }
+        &__terms {
+            margin: 19px 45px 27px 690px;
+        }   
+    }
+}

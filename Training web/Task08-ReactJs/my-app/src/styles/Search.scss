@@ -1,0 +1,71 @@
+@import './_settings/main.scss';
+
+
+
+.search {
+    background-image: none;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    &__title {
+        font-family: Arial;
+        font-size: 24px;
+        margin-left: 27px;
+        margin-bottom: 15px;
+    }
+    &__bar {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        margin-left: 27px;
+        margin-right: 30px;
+        border: 1px solid $search-bar;
+        border-radius: 20px;
+        font-family: Arial;
+        font-size: 18px;
+        line-height: 21px;
+        color: $search-bar;
+        text-indent: 15px;
+        height: 44px;
+        width: 84.16%;
+    }
+
+    &__input {
+        border: none;
+        margin-left: 25px;
+        font-size: 18px;
+        font-weight: lighter;
+    }
+    
+    @include tablet {
+        background-image: url('../images/banner-mobile.png');
+        background-size: 100vw;
+        background-position: left;
+        height: 428px;
+        margin-bottom: 5px;
+        &__title {
+            color: white;
+            padding: 224px 349px 41px 60px;
+            margin: 0;
+        }
+        &__bar {
+            background-color:$search-background;
+            margin-left: 60px;
+        }
+    }
+    @include desktop {
+        background-image: url('../images/banner.png');
+        background-size: cover;
+        align-content: flex-start;
+        height: 500px;
+
+        &__title {
+            font-size: 36px;
+        }
+
+        &__bar {
+            max-width: 538px;
+        }
+    }
+
+} 
